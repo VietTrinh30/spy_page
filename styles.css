@@ -817,7 +817,7 @@
   font-size: 12px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 960px) {
   .container-full-right {
     margin-left: calc((100vw - 1170px) / 2);
     margin-right: 0;
