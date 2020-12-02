@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 40px;
+  margin-top: 55px;
 }
 
 .feature-header-container {
@@ -588,6 +589,8 @@
   right: 0;
   top: 55px;
   background: white;
+  transition-property: width;
+  transition-duration: 0.25s;
 }
 
 .nav-header > li {
@@ -889,10 +892,6 @@
 
 .review-container {
   margin: 70px auto;
-}
-
-.menu-navigation {
-  width: 80%;
 }
 
 @media (min-width: 768px) {
