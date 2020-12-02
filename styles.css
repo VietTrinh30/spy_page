@@ -44,6 +44,46 @@
   background: #2dbe60;
 }
 
+.menu-button {
+  width: 30%;
+}
+.nav-menu-sub-link {
+  margin-top: 20px;
+}
+
+.nav-menu-sub-link a {
+  font-size: 18px;
+  color: #4a4a4a;
+  padding: 3px 2px;
+  border-bottom: 1px solid #2dbe60;
+}
+
+.inner-cross-flag {
+  border-bottom: solid 1px #bcbcbc;
+  min-height: 40px;
+}
+.head-cross {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  color: #000;
+  cursor: pointer;
+  width: 70px;
+  height: 37px;
+}
+
+.head-cross::before {
+  background: url(./images/cross-top.png);
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  content: "";
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
 .global-button {
   display: inline-block;
   padding: 16px 20px;
@@ -414,6 +454,11 @@
   color: white;
 }
 
+.nav-menu-list-button {
+  text-align: center;
+  padding: 10px;
+}
+
 .product-child-menu {
 }
 .product-child-menu > ul {
@@ -506,18 +551,43 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: white;
+  background: #ff0860;
   z-index: 1;
   display: block;
 }
 .container-full-right {
 }
+
+#menu {
+  margin: auto 10px;
+  border: none;
+  background: none;
+}
+
 .logo {
   display: none;
 }
 .nav-header {
-  width: 100%;
   list-style-type: none;
+}
+
+.nav-logo-container {
+  width: 100%;
+  height: 55px;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+}
+.nav-menu-container {
+  /* position: fixed;
+  right: -10%; */
+  width: 80%;
+  height: 100vh;
+  position: fixed;
+  height: 100vh;
+  right: 0;
+  top: 55px;
+  background: white;
 }
 
 .nav-header > li {
@@ -821,20 +891,33 @@
   margin: 70px auto;
 }
 
+.menu-navigation {
+  width: 80%;
+}
+
 @media (min-width: 768px) {
   .container-full-right {
     margin-left: calc((100vw - 1170px) / 2);
     margin-right: 0;
   }
 
-  .nav-header {
-    width: auto;
+  .nav-menu-container {
+    width: auto !important;
     border-bottom: none;
+    margin-left: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+    height: auto;
+    background: none;
+  }
+
+  .nav-header {
+    width: 100%;
     list-style-type: none;
     margin-bottom: 0;
     padding-left: 0;
     display: flex;
-    margin-left: auto;
   }
   .nav-header li {
     border-bottom: none;
@@ -862,6 +945,7 @@
   }
   .header {
     display: block;
+    background: white;
   }
   /* Banner */
 
@@ -1097,6 +1181,18 @@
   .legal li a {
     color: #c41301;
     font-size: 12px;
+    padding: 0 10px 0 0;
+    border-right: 1px solid grey;
+  }
+
+  .nav-logo-container {
+    width: auto;
+    height: auto;
+    display: block;
+  }
+
+  .menu-navigation {
+    width: auto !important;
   }
 
   /* .review-div-center {

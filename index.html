@@ -33,37 +33,56 @@
     <header class="header">
         <div class="container-full-right">
             <nav class="menu-header">
-                <div class="logo"><a href=""><img src="./images/XNSPY-logo-2.png" alt=""></a></div>
-                <ul class="nav-header">
-                    <li>
-                        <div class="dropdown">
-                            <a href="" class="dropdown-toggle nav-item" type="button" data-toggle="dropdown">Products
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu-product">
-                                <li><a href="/iphone-spy.html"><i class="fa fa-caret-right" aria-hidden="true"></i> For iPhone</a>
-                                </li>
-                                <li><a href="/android-spy.html"><i class="fa fa-caret-right" aria-hidden="true"></i> For Android</a>
-                                </li>
-                                <li><a href="/xnspy-for-schools.html"><i class="fa fa-caret-right" aria-hidden="true"></i> For
-                                        Schools</a></li>
-                                <li><a href="/employee-monitoring.html"><i class="fa fa-caret-right" aria-hidden="true"></i> For
-                                        Business</a></li>
-                            </ul>
+                <div class="nav-logo-container">
+                    <a class ="logo" href=""><img src="./images/XNSPY-logo-2.png" alt=""></a>
+                    <button onClick="expandMenuFunc()" id="menu" type="button" class="navbar-toggle d-md-none">
+                        <img src="./images/menu.png" alt="">
+                    </button>
+                </div>
+                <div class="nav-menu-container" id="menu-navigation">
+                    <div class="inner-cross-flag d-md-none">
+                        <i class="head-cross" onclick="closeMenu()"></i>
+                    </div>
+                    <div class="nav-menu-list-button d-md-none">
+                        <div>
+                            <a href="#" class="global-button global-button-green menu-button">Buy Now</a>
                         </div>
-                    </li>
-                    <li>
-                        <a class="nav-item" href="#">Features</a>
-                    </li>
-                    <li>
-                        <a class="nav-item" href="#">Compatibiliby</a>
-                    </li>
-                    <li><a class="nav-item" href="#">Live demo</a></li>
-                    <li><a class="nav-item" href="#">FAQs</a></li>
-                    <li><a class="nav-item" href="#">Support</a></li>
-                    <li><a class="nav-item" href="#">Login</a></li>
-                    <li><a href="" class="nav-item nav-buy-now">Buy Now</a></li>
-                </ul>
+                        <div class="nav-menu-sub-link">
+                            <a href="#">Live Demo</a>
+                        </div>
+                    </div>
+                    <ul class="nav-header">
+                        <li class="d-md-none"><a class="nav-item" href="/">Home</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <a href="" class="dropdown-toggle nav-item" type="button" data-toggle="dropdown">Products
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu-product">
+                                    <li><a href="/iphone-spy.html"><i class="fa fa-caret-right" aria-hidden="true"></i> For iPhone</a>
+                                    </li>
+                                    <li><a href="/android-spy.html"><i class="fa fa-caret-right" aria-hidden="true"></i> For Android</a>
+                                    </li>
+                                    <li><a href="/xnspy-for-schools.html"><i class="fa fa-caret-right" aria-hidden="true"></i> For
+                                            Schools</a></li>
+                                    <li><a href="/employee-monitoring.html"><i class="fa fa-caret-right" aria-hidden="true"></i> For
+                                            Business</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="nav-item" href="#">Features</a>
+                        </li>
+                        <li>
+                            <a class="nav-item" href="#">Compatibiliby</a>
+                        </li>
+                        <li class="d-none d-md-block"><a class="nav-item href="#">Live demo</a></li>
+                        <li><a class="nav-item" href="#">FAQs</a></li>
+                        <li><a class="nav-item" href="#">Support</a></li>
+                        <li><a class="nav-item" href="#">Login</a></li>
+                        <li class="d-none d-md-block"><a href="" class="nav-item nav-buy-now">Buy Now</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>        
     </header>
@@ -794,9 +813,9 @@
                                 monitoring purposes.</p>
                         </div>
                         <ul class="legal">
-                            <li><a href="/terms.html" data-cf-modified-01f8c57f68ac0aea9e4c5fc8-="">Terms</a> | </li>
-                            <li><a href="/privacy.html" data-cf-modified-01f8c57f68ac0aea9e4c5fc8-="">Privacy</a> | </li>
-                            <li><a href="/refund.html" data-cf-modified-01f8c57f68ac0aea9e4c5fc8-="">Refund</a> | </li>
+                            <li><a href="/terms.html" data-cf-modified-01f8c57f68ac0aea9e4c5fc8-="">Terms</a></li>
+                            <li><a href="/privacy.html" data-cf-modified-01f8c57f68ac0aea9e4c5fc8-="">Privacy</a></li>
+                            <li><a href="/refund.html" data-cf-modified-01f8c57f68ac0aea9e4c5fc8-="">Refund</a></li>
                             <li>This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies. Read our <a href="/cookie.html" data-cf-modified-01f8c57f68ac0aea9e4c5fc8-="">cookie</a> policy.</li>
                         </ul>
                     </div>
@@ -812,6 +831,18 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <script>
+        function expandMenuFunc() {
+            console.log("start open menu")
+            document.getElementById("menu-navigation").style.width = "80%";
+        }
+
+        function closeMenu(){
+            console.log("start close menu")
+            document.getElementById("menu-navigation").style.width = "0%";
+        }
+    </script>
 </body>
 </html>
